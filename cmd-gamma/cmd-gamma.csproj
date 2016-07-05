@@ -7,8 +7,8 @@
     <ProjectGuid>{B74DCBE7-BA9A-4CC2-A684-A163F7A320CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cmd_gamma</RootNamespace>
-    <AssemblyName>cmd-gamma</AssemblyName>
+    <RootNamespace>orez.ogamma</RootNamespace>
+    <AssemblyName>ogamma</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="math\oVector.cs" />
+    <Compile Include="oParams.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="win32\oGdi.cs" />
+    <Compile Include="win32\oUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
