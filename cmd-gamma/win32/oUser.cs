@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 namespace cmd_gamma.win32 {
-	class User {
+	class oUser {
 
 		// extern methods
 		[DllImport("user32.dll")]

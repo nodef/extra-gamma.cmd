@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 namespace cmd_gamma.win32 {
-	class Gdi {
+	class oGdi {
 
 		// types
 		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
