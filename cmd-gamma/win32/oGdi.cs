@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace cmd_gamma.win32 {
+namespace orez.ogamma.win32 {
 	class oGdi {
 
 		// types

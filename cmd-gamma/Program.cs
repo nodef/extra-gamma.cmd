@@ -1,7 +1,7 @@
 ﻿using System;
-using cmd_gamma.win32;
+using orez.ogamma.win32;
 
-namespace cmd_gamma {
+namespace orez.ogamma {
 	class Program {
 		static void Main(string[] args) {
 			oGdi.RAMP r = new oGdi.RAMP();

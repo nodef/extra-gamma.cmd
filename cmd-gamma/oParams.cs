@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cmd_gamma {
+namespace orez.ogamma {
 	class oParams {
 
 	}
