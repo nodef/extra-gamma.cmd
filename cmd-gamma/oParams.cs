@@ -37,7 +37,7 @@ namespace orez.ogamma {
 				if (v == "-r" || v == "--ramp") { Ramp = true; continue; }
 				if (v == "-c" || v == "--color") { Color = true;  continue; }
 				v = v.ToLower();
-				if (v[0] >= 'a' && v[0] <= 'Z') { s = v[0]; continue; }
+				if (v[0] >= 'a' && v[0] <= 'z') { s = v[0]; continue; }
 				double n = 0.0;
 				double.TryParse(v, out n);
 				bool sp = !Color || (s != 'r' && s != 'g' && s != 'b');
