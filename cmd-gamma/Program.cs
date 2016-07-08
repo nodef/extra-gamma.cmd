@@ -15,6 +15,7 @@ namespace orez.ogamma {
 		/// <param name="args">Input arguments.</param>
 		static void Main(string[] args) {
 			oParams p = new oParams(args);
+			if (p.Red.Count == 0 || p.Green.Count == 0 || p.Blue.Count == 0) return;
 			if (!p.Ramp) SetGammaRamps(p);
 			oGdi.RAMP r = new oGdi.RAMP();
 			SetGdiRamp(ref r, p.Red, p.Green, p.Blue);
