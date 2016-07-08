@@ -7,13 +7,17 @@ namespace orez.ogamma.win32 {
 		// types
 		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
 		public struct RAMP {
-			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = RAMP_SZ)]
 			public UInt16[] Red;
-			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = RAMP_SZ)]
 			public UInt16[] Green;
-			[MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
+			[MarshalAs(UnmanagedType.ByValArray, SizeConst = RAMP_SZ)]
 			public UInt16[] Blue;
 		};
+
+
+		// constant data
+		public const int RAMP_SZ = 256;
 
 
 		// extern methods
