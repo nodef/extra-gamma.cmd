@@ -14,7 +14,6 @@ namespace orez.ogamma {
 		/// </summary>
 		/// <param name="args">Input arguments.</param>
 		static void Main(string[] args) {
-			args = new string[] { "--ramp", "0.0", "0.5", "1.0" };
 			oParams p = new oParams(args);
 			if (!p.Ramp) SetGammaRamps(p);
 			oGdi.RAMP r = new oGdi.RAMP();
