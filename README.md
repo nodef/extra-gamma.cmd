@@ -36,6 +36,9 @@ Set Gamma ramp for Display Device from Windows Console.
 
 :: set gamma ramp for each color to default
 > ogamma -r -c R 0.0 0.25 0.5 0.75 1.0 G 0.0 0.5 1.0 B 0.0 1.0
+
+:: get current gamma ramp
+> ogamma
 ```
 
 

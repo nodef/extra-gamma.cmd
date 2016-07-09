@@ -13,6 +13,19 @@ namespace orez.ogamma.win32 {
 			public UInt16[] Green;
 			[MarshalAs(UnmanagedType.ByValArray, SizeConst = RAMP_SZ)]
 			public UInt16[] Blue;
+
+			// constructor
+			/// <summary>
+			/// Define red, blue and green arrays.
+			/// </summary>
+			/// <param name="r">Red array.</param>
+			/// <param name="g">Green array.</param>
+			/// <param name="b">Blue array.</param>
+			public RAMP(UInt16[] r = null, UInt16[] g = null, UInt16[] b = null) {
+				Red = r == null ? new UInt16[RAMP_SZ] : r;
+				Green = g == null ? new UInt16[RAMP_SZ] : g;
+				Blue = b == null ? new UInt16[RAMP_SZ] : b;
+			}
 		};
 
 
