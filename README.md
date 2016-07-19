@@ -1,6 +1,6 @@
 # ogamma
 
-Set Gamma ramp for Display Device from Windows Console.
+Get or set Gamma ramp for Display Device from Windows Console.
 
 
 ## usage
@@ -40,8 +40,3 @@ Set Gamma ramp for Display Device from Windows Console.
 :: get current gamma ramp
 > ogamma
 ```
-
-
-## license
-
-Do you have a Poké ball? That's enough!
