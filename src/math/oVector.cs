@@ -77,9 +77,9 @@ namespace orez.ogamma.math {
 		/// <param name="s">Source vector.</param>
 		/// <returns>Piecewise linear vector from Source.</returns>
 		public static IList<double> GetLin(IList<double> d, IList<double> s) {
-			double p = 0.0, pd = 1.0 / s.Count;
+			double p = 0.0, pd = 1.0 / d.Count;
 			d = d == null ? new double[s.Count] : d;
-			for (int i = 0; i < d.Count; i++)
+			for (int i = 0; i < d.Count; i++, p += pd)
 				d[i] = GetLin(s, p);
 			return d;
 		}

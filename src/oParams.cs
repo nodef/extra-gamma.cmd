@@ -33,10 +33,9 @@ namespace orez.ogamma {
 			Green = new List<double>();
 			Blue = new List<double>();
 			for (int a = 0; a < args.Length; a++) {
-				string v = args[a];
-				if (v == "-r" || v == "--ramp") { Ramp = true; continue; }
-				if (v == "-c" || v == "--color") { Color = true;  continue; }
-				v = v.ToLower();
+				string v = args[a].ToLower();
+				if (v.StartsWith("--")) { SetOption(v.Substring(2, 1)); continue; }
+				else if (v.StartsWith("-")) { SetOption(v.Substring(1)); continue; }
 				if (v[0] >= 'a' && v[0] <= 'z') { s = v[0]; continue; }
 				double n = 0.0;
 				double.TryParse(v, out n);
@@ -44,6 +43,18 @@ namespace orez.ogamma {
 				if (s == 'r' || sp) Red.Add(n);
 				if (s == 'g' || sp) Green.Add(n);
 				if (s == 'b' || sp) Blue.Add(n);
+			}
+		}
+
+
+		/// <summary>
+		/// Set input option.
+		/// </summary>
+		/// <param name="o">Option string.</param>
+		private void SetOption(string o) {
+			foreach(char c in o) {
+				if (c == 'r') Ramp = true;
+				else if (c == 'c') Color = true;
 			}
 		}
 	}
