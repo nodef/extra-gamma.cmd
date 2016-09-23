@@ -6,6 +6,10 @@ using orez.ogamma.math;
 namespace orez.ogamma {
 	class Program {
 
+		// constant data
+		private const string APP = "ogamma";
+
+
 		// static method
 		/// <summary>
 		/// I can touch the sky,
@@ -16,20 +20,33 @@ namespace orez.ogamma {
 		static void Main(string[] args) {
 			oParams p = new oParams(args);
 			if (args.Length == 0) { GetGdiRamp(); return; }
-			if (p.Red.Count == 0) { Console.Error.WriteLine("err: no red values."); return; }
-			if (p.Green.Count == 0) { Console.Error.WriteLine("err: no green values."); return; }
-			if (p.Blue.Count == 0) { Console.Error.WriteLine("err: no blue values."); return; }
-			if (!p.Ramp) {
-				p.Red = GetRamp(p.Red[0], oGdi.RAMP_SZ);
-				p.Green = GetRamp(p.Green[0], oGdi.RAMP_SZ);
-				p.Blue = GetRamp(p.Blue[0], oGdi.RAMP_SZ);
-			}
-			else {
+			if (p.Red.Count == 0) { Console.Error.WriteLine("{0}: no red values.", APP); return; }
+			if (p.Green.Count == 0) { Console.Error.WriteLine("{0}: no green values.", APP); return; }
+			if (p.Blue.Count == 0) { Console.Error.WriteLine("{0}: no blue values.", APP); return; }
+			if (p.Ramp) {
+				RampMin2(p.Red, p.Green, p.Blue);
 				p.Red = oVector.GetLin(new double[oGdi.RAMP_SZ], p.Red);
 				p.Green = oVector.GetLin(new double[oGdi.RAMP_SZ], p.Green);
 				p.Blue = oVector.GetLin(new double[oGdi.RAMP_SZ], p.Blue);
 			}
+			else {
+				p.Red = GetRamp(p.Red[0], oGdi.RAMP_SZ);
+				p.Green = GetRamp(p.Green[0], oGdi.RAMP_SZ);
+				p.Blue = GetRamp(p.Blue[0], oGdi.RAMP_SZ);
+			}
 			SetGdiRamp(p.Red, p.Green, p.Blue);
+		}
+
+		/// <summary>
+		/// Make sure the red, green and blue ramps have minimum 2 values.
+		/// </summary>
+		/// <param name="red">Red floating-point ramp.</param>
+		/// <param name="green">Green floating-point ramp.</param>
+		/// <param name="blue">Blue floating-point ramp.</param>
+		private static void RampMin2(IList<double> red, IList<double> green, IList<double> blue) {
+			if (red.Count < 2) { red.Add(red[0]); red[0] = 0; }
+			if (green.Count < 2) { green.Add(green[0]); green[0] = 0; }
+			if (blue.Count < 2) { blue.Add(blue[0]); blue[0] = 0; }
 		}
 
 		/// <summary>
