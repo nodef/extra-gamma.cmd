@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace orez.ogamma.win32 {
-	class oGdi {
+namespace App.win32 {
+	class EGdi {
 
 		// types
 		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]

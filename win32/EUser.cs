@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace orez.ogamma.win32 {
-	class oUser {
+namespace App.win32 {
+	class EUser {
 
 		// extern methods
 		[DllImport("user32.dll")]

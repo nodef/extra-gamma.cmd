@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace orez.ogamma {
-	class oParams {
+namespace App {
+	class EParams {
 
 		// data
 		/// <summary>
@@ -27,7 +27,7 @@ namespace orez.ogamma {
 		/// Get input parameters from input arguments.
 		/// </summary>
 		/// <param name="args">Input arguments.</param>
-		public oParams(string[] args) {
+		public EParams(string[] args) {
 			char s = '\0';
 			Red = new List<double>();
 			Green = new List<double>();

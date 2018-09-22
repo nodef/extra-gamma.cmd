@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace orez.ogamma.math {
-	class oVector {
+namespace App.math {
+	class EVector {
 
 		// static method
 		/// <summary>
