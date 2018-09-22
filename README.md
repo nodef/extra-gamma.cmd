@@ -1,5 +1,5 @@
 Get or set Gamma ramp for Display Device from Windows Console.
-> 1. Download [exe file](https://github.com/winp/extra-gamma/releases/download/1.0.0/egamma.exe).
+> 1. Download [exe file](https://github.com/cmdf/extra-gamma/releases/download/1.0.0/egamma.exe).
 > 2. Copy to `C:\Program_Files\Scripts`.
 > 3. Add `C:\Program_Files\Scripts` to `PATH` environment variable.
 
@@ -41,4 +41,4 @@ Get or set Gamma ramp for Display Device from Windows Console.
 ```
 
 
-[![Merferry](https://i.imgur.com/b5zPANh.jpg)](https://merferry.github.io)
+[![cmdf](https://i.imgur.com/b5zPANh.jpg)](https://cmdf.github.io)
