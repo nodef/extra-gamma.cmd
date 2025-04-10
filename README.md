@@ -42,3 +42,4 @@ Get or set Gamma ramp for Display Device from Windows Console.
 
 
 [![cmdf](https://i.imgur.com/b5zPANh.jpg)](https://cmdf.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/extra-gamma.cmd)
